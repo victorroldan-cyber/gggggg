@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodCaps | Tu mood. Tu estilo. Tu gorra.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        moodBlack: '#0a0a0a',
+                        moodWhite: '#f5f5f5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados adicionales */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: black;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-moodBlack font-sans antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- Representación tipográfica del logo -->
+                    <span class="font-extrabold text-3xl tracking-tighter">Mood<span class="font-light">caps</span></span>
+                    <i class="fa-solid fa-hat-cowboy ml-2 text-2xl"></i> <!-- Icono representativo -->
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link text-sm font-semibold uppercase tracking-wider text-black">Inicio</a>
+                    <a href="#nosotros" class="nav-link text-sm font-semibold uppercase tracking-wider text-black">Concepto</a>
+                    <a href="#mision" class="nav-link text-sm font-semibold uppercase tracking-wider text-black">Misión y Visión</a>
+                    <a href="#valores" class="nav-link text-sm font-semibold uppercase tracking-wider text-black">Valores</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-black hover:text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-black hover:bg-gray-50">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-2 text-base font-medium text-black hover:bg-gray-50">Concepto</a>
+                <a href="#mision" class="block px-3 py-2 text-base font-medium text-black hover:bg-gray-50">Misión y Visión</a>
+                <a href="#valores" class="block px-3 py-2 text-base font-medium text-black hover:bg-gray-50">Valores</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-moodBlack overflow-hidden min-h-screen flex items-center">
+        <!-- Elemento decorativo de fondo -->
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl fade-in">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 uppercase">
+                    Tu mood.<br>
+                    <span class="text-gray-400">Tu estilo.</span><br>
+                    Tu gorra.
+                </h1>
+                <p class="text-lg text-gray-300 mb-10 font-light leading-relaxed max-w-lg">
+                    Más que un accesorio, es una forma de expresar quién eres. Únete a la comunidad que está redefiniendo el estilo y el emprendimiento en Colombia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#nosotros" class="inline-block text-center px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-gray-200 transition-colors duration-300">Descubre Más</a>
+                    <a href="#valores" class="inline-block text-center px-8 py-4 border border-white text-white font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-colors duration-300">Nuestros Valores</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 mb-3">El Concepto</h2>
+                    <h3 class="text-4xl font-extrabold text-black mb-6">Más que un accesorio, tu presencia.</h3>
+                    <p class="text-gray-600 mb-6 text-lg font-light leading-relaxed">
+                        <strong>MoodCaps</strong> nace de una idea sencilla: una gorra no es solo un accesorio, es parte de tu presencia, representa tus gustos, tu personalidad y el mood con el que quieres salir al mundo.
+                    </p>
+                    <p class="text-gray-600 mb-6 text-lg font-light leading-relaxed">
+                        Pero también queremos que MoodCaps represente una oportunidad. Queremos que nuestros productos no solo lleguen al consumidor final, sino también a personas que sueñan con emprender y encontrar en las gorras una oportunidad para comenzar su propio negocio.
+                    </p>
+                    <p class="text-black font-semibold text-lg border-l-4 border-black pl-4 py-2">
+                        Nuestro objetivo es crecer junto a ellos, creando oportunidades para una comunidad de emprendedores.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-black translate-x-4 translate-y-4 rounded-xl"></div>
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gorra Negra Elegante" class="relative z-10 w-full h-auto object-cover rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mision" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-black mb-4">Nuestro Norte</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Misión -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-black mb-4 uppercase tracking-wide">Misión</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        En MoodCaps transformamos una gorra en una forma de expresar quién eres sin importar edades, la edad es solo un numero. Ofrecemos gorras de calidad que representan diferentes estilos, gustos y moods, mientras brindamos oportunidades a emprendedores que quieren iniciar o crecer en el mundo del comercio de gorras, mediante productos accesibles, variedad y un servicio confiable.
+                    </p>
+                </div>
+
+                <!-- Visión -->
+                <div class="bg-moodBlack text-white p-10 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 uppercase tracking-wide">Visión</h3>
+                    <p class="text-gray-300 font-light leading-relaxed">
+                        Ser una marca referente en Colombia en el mercado de gorras, reconocida por convertir estilos y personalidades en productos que generan identidad. Buscamos evolucionar de la comercialización a la fabricación y distribución 100% mayorista, creando oportunidades para nuevos emprendedores y construyendo una comunidad alrededor de la moda, el estilo y el emprendimiento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="valores" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 mb-3">Nuestra Esencia</h2>
+                <h3 class="text-4xl font-extrabold text-black mb-4">Valores Corporativos</h3>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Valor 1 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border-2 border-black rounded-full flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-fingerprint text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Identidad</h4>
+                    <p class="text-sm text-gray-600 font-light">Creemos que cada persona tiene un estilo y un mood propio.</p>
+                </div>
+                <!-- Valor 2 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border-2 border-black rounded-full flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-gem text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Calidad</h4>
+                    <p class="text-sm text-gray-600 font-light">Buscamos ofrecer productos que cumplan con las expectativas.</p>
+                </div>
+                <!-- Valor 3 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border-2 border-black rounded-full flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-rocket text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Emprendimiento</h4>
+                    <p class="text-sm text-gray-600 font-light">Apoyamos a quienes quieren comenzar y crecer en los negocios.</p>
+                </div>
+                <!-- Valor 4 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border-2 border-black rounded-full flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Innovación</h4>
+                    <p class="text-sm text-gray-600 font-light">Abiertos a nuevos diseños, tendencias e ideas del mercado.</p>
+                </div>
+                <!-- Valor 5 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border-2 border-black rounded-full flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-handshake text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Confianza</h4>
+                    <p class="text-sm text-gray-600 font-light">Relaciones comerciales basadas en transparencia y cumplimiento.</p>
+                </div>
+                <!-- Valor 6 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border-2 border-black rounded-full flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-dumbbell text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Disciplina</h4>
+                    <p class="text-sm text-gray-600 font-light">Trabajamos constantemente de forma estructurada para crecer.</p>
+                </div>
+                <!-- Valor 7 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border-2 border-black rounded-full flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-fire text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Pasión</h4>
+                    <p class="text-sm text-gray-600 font-light">Nos gusta lo que hacemos y lo transmitimos en cada producto.</p>
+                </div>
+                <!-- Valor 8 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border-2 border-black rounded-full flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-users text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Comunidad</h4>
+                    <p class="text-sm text-gray-600 font-light">Queremos crecer junto a nuestros clientes y emprendedores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <span class="font-extrabold text-2xl tracking-tighter block mb-2">Mood<span class="font-light">caps</span></span>
+                    <p class="text-gray-400 text-sm">Tu mood. Tu estilo. Tu gorra.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-600 text-sm border-t border-gray-800 pt-8">
+                &copy; 2026 MoodCaps. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lógica de navegación e interacción (Reemplaza main.js) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Manejo del menú móvil
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Cerrar menú móvil al hacer click en un enlace
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+
+            // Efecto sutil en la barra de navegación al hacer scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    navbar.classList.add('shadow-md');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
